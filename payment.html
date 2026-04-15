@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penyelesaian Pembayaran | WisataNusa Adventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .payment-wrap {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2070&auto=format&fit=crop') center/cover fixed;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .payment-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 17, 40, 0.7);
+            z-index: 0;
+        }
+        .payment-card {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 600px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            padding: 40px;
+            color: var(--white);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        html:not([data-theme="dark"]) .payment-card h2, 
+        html:not([data-theme="dark"]) .payment-card label,
+        html:not([data-theme="dark"]) .payment-card span,
+        html:not([data-theme="dark"]) .payment-card a {
+            color: #ffffff !important;
+        }
+        .payment-card h2 { margin-bottom: 30px; font-size: 2rem; text-align: center; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.9rem; }
+        .form-control {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+        .form-control:focus {
+            border-color: var(--primary-light);
+            background: rgba(255,255,255,0.15);
+        }
+        .form-control::placeholder { color: rgba(255,255,255,0.5); }
+        .btn-pay { width: 100%; padding: 16px; font-size: 1.1rem; margin-top: 20px; }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            opacity: 0.8;
+        }
+        .back-link:hover { opacity: 1; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="payment-wrap">
+        <div class="payment-overlay"></div>
+        <div class="payment-card" id="cardAnim">
+            <a href="index.html" class="back-link">&larr; Kembali ke Beranda</a>
+            <h2>Selesaikan Pembayaran</h2>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" class="form-control" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label>Alamat Email</label>
+                    <input type="email" class="form-control" placeholder="email@contoh.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Metode Pembayaran</label>
+                    <select class="form-control" required style="color: #333; background: #fff;">
+                        <option value="">-- Pilih Metode --</option>
+                        <option value="transfer">Transfer Bank (BCA/Mandiri/BNI)</option>
+                        <option value="qris">E-Wallet (OVO/GoPay/Dana via QRIS)</option>
+                        <option value="card">Kartu Kredit / Debit</option>
+                    </select>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin: 25px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <span>Total Tagihan Simulasi:</span>
+                        <span style="font-weight: bold; font-size: 1.2rem; color: #FFD700 !important;">Rp 2.500.000</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-pay">Proses Sekarang</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('payment-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Proses Pembayaran Berhasil Disimulasikan! Terima kasih.');
+                window.location.href = 'index.html';
+            });
+            // Intro animation
+            setTimeout(() => {
+                const card = document.getElementById('cardAnim');
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 150);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WisataNusa Adventure - Platform pemesanan perjalanan premium untuk destinasi eksotis Indonesia.">
+    <title>WisataNusa Adventure | Jelajahi Keindahan Nusantara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- custom cursor -->
+    <div class="cursor hidden-mobile"></div>
+    <div class="cursor-follower hidden-mobile"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">WisataNusa<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Beranda</a></li>
+                <li><a href="#destinations">Destinasi</a></li>
+                <li><a href="#packages">Paket</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#testimonials">Ulasan</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-icon theme-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero section">
+        <div class="hero-bg parallax" style="background-image: url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2070&auto=format&fit=crop');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="fade-up">Petualangan Tanpa Batas<br>di <span>Nusantara</span></h1>
+            <p class="fade-up delay-1">Temukan keindahan alam tersembunyi Indonesia dengan pengalaman perjalanan premium yang tak terlupakan.</p>
+            <div class="hero-actions fade-up delay-2">
+                <a href="#destinations" class="btn btn-primary">Mulai Eksplorasi</a>
+                <a href="#packages" class="btn btn-secondary-outline">Lihat Paket</a>
+            </div>
+            
+            <div class="hero-stats glassmorphism fade-up delay-3">
+                <div class="stat">
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Destinasi</p>
+                </div>
+                <div class="stat divider"></div>
+                <div class="stat">
+                    <h3 class="counter" data-target="120">0</h3>
+                    <p>Paket Wisata</p>
+                </div>
+                <div class="stat divider"></div>
+                <div class="stat">
+                    <h3 class="counter" data-target="10000">0</h3>
+                    <p>Pelancong</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="destinations" class="destinations section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="subtitle">EKSPLORASI</p>
+                <h2 class="section-title">Destinasi <span>Favorit</span></h2>
+                <p class="section-desc">Jelajahi tempat-tempat menakjubkan yang menjadi primadona wisatawan dunia.</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <div class="card destination-card fade-up">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1470&auto=format&fit=crop" alt="Bali" loading="lazy">
+                    </div>
+                    <div class="card-content glassmorphism">
+                        <div class="card-meta">PULAU BALI</div>
+                        <h3>Ubud & Sekitarnya</h3>
+                        <p>Pesona sawah terasering dan kebudayaan kental.</p>
+                        <a href="#packages" class="card-link">Eksplor</a>
+                    </div>
+                </div>
+                <div class="card destination-card fade-up delay-1">
+                    <div class="card-img">
+                        <img src="Bromo Mountain 🌄🇮🇩.jpg" alt="Komodo" loading="lazy">
+                    </div>
+                    <div class="card-content glassmorphism">
+                        <div class="card-meta">NUSA TENGGARA</div>
+                        <h3>Taman Nasional Komodo</h3>
+                        <p>Habitat naga purba dan pulau eksotis.</p>
+                        <a href="#packages" class="card-link">Eksplor</a>
+                    </div>
+                </div>
+                <div class="card destination-card fade-up delay-2">
+                    <div class="card-img">
+                        <img src="rajaampat.jpg" alt="Raja Ampat" loading="lazy">
+                    </div>
+                    <div class="card-content glassmorphism">
+                        <div class="card-meta">PAPUA BARAT</div>
+                        <h3>Kepulauan Raja Ampat</h3>
+                        <p>Surga bawah laut dengan keanekaragaman terbaik.</p>
+                        <a href="#packages" class="card-link">Eksplor</a>
+                    </div>
+                </div>
+                <div class="card destination-card fade-up delay-2">
+                    <div class="card-img">
+                        <img src="Bromo Mountain 🌄🇮🇩.jpg" alt="Raja Ampat" loading="lazy">
+                    </div>
+                    <div class="card-content glassmorphism">
+                        <div class="card-meta">MALANG JAWA TIMUR</div>
+                        <h3>Gunung Bromo</h3>
+                        <p>Keindahan yang Tak Pernah Gagal Membuat Takjub.</p>
+                        <a href="#packages" class="card-link">Eksplor</a>
+                    </div>
+                </div>
+                <div class="card destination-card fade-up delay-2">
+                    <div class="card-img">
+                        <img src="pantai pink.jpg" alt="Raja Ampat" loading="lazy">
+                    </div>
+                    <div class="card-content glassmorphism">
+                        <div class="card-meta">LOMBOK NTB</div>
+                        <h3>Pantai Pink</h3>
+                        <p>Rasakan Pesona Pantai Berwarna Pink.</p>
+                        <a href="#packages" class="card-link">Eksplor</a>
+                    </div>
+                </div>
+                <div class="card destination-card fade-up delay-2">
+                    <div class="card-img">
+                        <img src="waerebo.jpg" alt="Raja Ampat" loading="lazy">
+                    </div>
+                    <div class="card-content glassmorphism">
+                        <div class="card-meta">MANGGARAI, NTT</div>
+                        <h3>Wae Rebo</h3>
+                        <p>Petualangan Ekstrem dengan Pemandangan Unik.</p>
+                        <a href="#packages" class="card-link">Eksplor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- kolom ke-2 -->
+    <section id="packages" class="packages section bg-alt">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <p class="subtitle">PENAWARAN TERBATAS</p>
+                <h2 class="section-title">Paket <span>Eksklusif</span></h2>
+                <p class="section-desc" style="margin: 0 auto;">Pilih petualangan bernuansa magis untuk liburan Anda.</p>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="package-card fade-up">
+                    <div class="package-img">
+                        <img src="https://images.unsplash.com/photo-1604999333679-b86d54738315?q=80&w=1450&auto=format&fit=crop" alt="Bromo" loading="lazy">
+                        <span class="badge">Terlaris</span>
+                    </div>
+                    <div class="package-details">
+                        <div class="package-meta">
+                            <span>⏱ 3 Hari 2 Malam</span>
+                            <span>📍 Bali</span>
+                        </div>
+                        <h3>Ubud Dengan Pesona Keindahannya</h3>
+                        <p class="package-desc"> budaya dan alam di Ubud,Dari sawah terasering yang ikonik, yoga retreat yang menenangkan.</p>
+                        <div class="price-row">
+                            <h4 class="price">Rp 3.5jt<span>/org</span></h4>
+                            <a href="payment.html" class="btn btn-primary btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card fade-up">
+                    <div class="package-img">
+                        <img src="Bromo Mountain 🌄🇮🇩.jpg" alt="Bromo" loading="lazy">
+                        <span class="badge">Terlaris</span>
+                    </div>
+                    <div class="package-details">
+                        <div class="package-meta">
+                            <span>⏱ 2 Hari 1 Malam</span>
+                            <span>📍 Jawa Timur</span>
+                        </div>
+                        <h3>Sunrise Spektakuler Bromo & Kawah Ijen</h3>
+                        <p class="package-desc">Trekking menantang menuju kawah aktif dan panorama matahari terbit.</p>
+                        <div class="price-row">
+                            <h4 class="price">Rp 2.2jt<span>/org</span></h4>
+                            <a href="payment.html" class="btn btn-primary btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card fade-up">
+                    <div class="package-img">
+                        <img src="komodo.jpg" alt="Bromo" loading="lazy">
+                        <span class="badge">Terlaris</span>
+                    </div>
+                    <div class="package-details">
+                        <div class="package-meta">
+                            <span>⏱ 1 Hari 2 Malam</span>
+                            <span>📍 Nusa Tenggara</span>
+                        </div>
+                        <h3>Taman National Komodo</h3>
+                        <p class="package-desc">Habitat Naga Purba Dan Pulau Eksotis akan ke indahan pulau kodomo.</p>
+                        <div class="price-row">
+                            <h4 class="price">Rp 2.5jt<span>/org</span></h4>
+                            <a href="payment.html" class="btn btn-primary btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card fade-up delay-1">
+                    <div class="package-img">
+                        <img src="waerebo.jpg" alt="Nusa Penida" loading="lazy">
+                    </div>
+                    <div class="package-details">
+                        <div class="package-meta">
+                            <span>⏱ 2 Hari 1 Malam</span>
+                            <span>📍 NTT</span>
+                        </div>
+                        <h3>Eksplorasi Api Wae Rebo</h3>
+                        <p class="package-desc">Kawah Ijen menyimpan fenomena langka berupa api biru yang menyala di tengah gelapnya malam.</p>
+                        <div class="price-row">
+                            <h4 class="price">Rp 1.90jt<span>/org</span></h4>
+                            <a href="payment.html" class="btn btn-primary btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card fade-up delay-1">
+                    <div class="package-img">
+                        <img src="rajaampat.jpg" alt="Nusa Penida" loading="lazy">
+                    </div>
+                    <div class="package-details">
+                        <div class="package-meta">
+                            <span>⏱ 2 Hari 1 Malam</span>
+                            <span>📍 Papua Barat</span>
+                        </div>
+                        <h3>Kepulauan Raja Ampat</h3>
+                        <p class="package-desc">Surga bawah laut dengan keanekaragaman terbaik dan pesona keindahannya.</p>
+                        <div class="price-row">
+                            <h4 class="price">Rp 3.5jt<span>/org</span></h4>
+                            <a href="payment.html" class="btn btn-primary btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card fade-up delay-1">
+                    <div class="package-img">
+                        <img src="pantai pink.jpg" alt="Nusa Penida" loading="lazy">
+                    </div>
+                    <div class="package-details">
+                        <div class="package-meta">
+                            <span>⏱ 2 Hari 1 Malam</span>
+                            <span>📍 Lombok NTB</span>
+                        </div>
+                        <h3>Pantai Pink Indah</h3>
+                        <p class="package-desc">Rasakan Pesona Pantai Berwarna Pink.</p>
+                        <div class="price-row">
+                            <h4 class="price">Rp 1.5jt<span>/org</span></h4>
+                            <a href="payment.html" class="btn btn-primary btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery section">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <p class="subtitle">MOMEN INDAH</p>
+                <h2 class="section-title">Harmoni <span>Nusantara</span></h2>
+            </div>
+            
+            <div class="gallery-slider fade-up">
+                <div class="main-slide">
+                    <img id="current-slide" src="waerebo.jpg" alt="Gallery Main" loading="lazy">
+                    <div class="slider-controls">
+                        <button id="prev-slide" class="btn btn-icon btn-glass">&#10094;</button>
+                        <button id="next-slide" class="btn btn-icon btn-glass">&#10095;</button>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail active" src="waerebo.jpg" alt="Rinjani" data-index="0">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1471&auto=format&fit=crop" alt="Borobudur" data-index="1">
+                    <img class="thumbnail" src="rajaampat.jpg" alt="Bajo" data-index="2">
+                    <img class="thumbnail" src="komodo.jpg" alt="Waerebo" data-index="3">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1470&auto=format&fit=crop" alt="Bali" data-index="4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section bg-alt">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <p class="subtitle">KATA MEREKA</p>
+                <h2 class="section-title">Cerita <span>Pelancong</span></h2>
+                <p class="section-desc" style="margin: 0 auto;">Lihat pengalaman seru dari konsumen yang telah berpetualang bersama kami.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-up">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"Pengalaman terbaik seumur hidup! WisataNusa mengatur segalanya dengan sempurna dari awal hingga akhir di Raja Ampat."</p>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop" alt="Avatar" loading="lazy">
+                        <div>
+                            <h4>Siti Sarah</h4>
+                            <p>Travel Blogger</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-up delay-1">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"Sangat puas dengan asisten lokal selama di Bromo. Pemandangan super, jadwal sangat on time, dan jeep amat nyaman."</p>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop" alt="Avatar" loading="lazy">
+                        <div>
+                            <h4>Budi Santoso</h4>
+                            <p>Pengusaha, Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-up delay-2">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"Taman Nasional Komodo tak pernah seindah ini! Snorkeling melihat manta sungguh magis."</p>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Avatar" loading="lazy">
+                        <div>
+                            <h4>Anita Wijaya</h4>
+                            <p>Fotografer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card fade-up">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"Paket di Bali sangat luar biasa. Penginapannya eksklusif dan restoran yang dipilih sangat lezat."</p>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Avatar" loading="lazy">
+                        <div>
+                            <h4>Kevin Pratama</h4>
+                            <p>Freelancer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card fade-up delay-1">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"Destinasi anti mainstream di Waerebo menjadi highlight tersendiri. Sangat edukatif dan penuh nilai budaya."</p>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="Avatar" loading="lazy">
+                        <div>
+                            <h4>Putri Larasati</h4>
+                            <p>Dosen</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card fade-up delay-2">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"Sebagai pendaki pemula, Gunung Rinjani terasa aman dan berkesan berkat porter yang hebat dari WisataNusa."</p>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=150&auto=format&fit=crop" alt="Avatar" loading="lazy">
+                        <div>
+                            <h4>Reza Pahlevi</h4>
+                            <p>Mahasiswa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container center-footer">
+            <h2 class="logo" style="margin-bottom: 10px;">WisataNusa<span>.</span></h2>
+            <p style="color: var(--text-light); max-width: 400px; margin: 0 auto 20px;">Platform travel lokal terpercaya dengan layanan kelas dunia.</p>
+            <p>&copy; 2026 WisataNusa Adventure. Dibuat dengan cinta untuk Nusantara.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281234567890" target="_blank" class="wa-float" aria-label="Hubungi via WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>
